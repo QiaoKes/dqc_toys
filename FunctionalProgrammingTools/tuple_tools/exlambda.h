@@ -1,6 +1,6 @@
 #pragma once
 
-//¹ÜµÀÔËËã·û
+//ç®¡é“è¿ç®—ç¬¦
 template <typename Arg, typename Func>
 auto operator|(Arg&& arg, Func&& f) -> decltype(f(std::forward<Arg>(arg)))
 {
@@ -15,7 +15,7 @@ auto operator|(std::tuple<Args...>&& args, Func&& f)
 
 namespace exfp 
 {
-	//Y×éºÏ×Ó
+	//YÃ—Ã©ÂºÃÃ—Ã“
 	template<typename Func>
 	class LambdaHelper {
 	private:
