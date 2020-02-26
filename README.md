@@ -57,7 +57,7 @@ int main()
     auto gcd = Y(
         [](auto g, int a, int b)->int { return b == 0 ? a : g(b, a % b); }
     );
-    cout << gcd(63, 105) << endl; // => 21
+    cout << gcd(63, 105) << endl; 
     // => 21
     
     //像管道一样传输数据  eg: (参数包) | (函数)
