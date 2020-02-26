@@ -15,7 +15,7 @@ auto operator|(std::tuple<Args...>&& args, Func&& f)
 
 namespace exfp 
 {
-	//Y×éºÏ×Ó
+	//Y组合子
 	template<typename Func>
 	class LambdaHelper {
 	private:
