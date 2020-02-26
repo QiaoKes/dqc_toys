@@ -53,7 +53,7 @@ using namespace exfp;
 
 int main()
 {
-    //很coooool的功能, 返回一个匿名的lambda递归函数
+    //Y组合子 很coooool的功能, 返回一个匿名的lambda递归函数
     auto gcd = Y(
         [](auto g, int a, int b)->int { return b == 0 ? a : g(b, a % b); }
     );
