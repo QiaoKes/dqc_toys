@@ -31,7 +31,7 @@ namespace exfp
 		}
 	};
 
-	/*处理方式不好，弃用
+	/* 澶勭悊鏂瑰紡涓嶅綋 寮冪敤
 	template<typename Func, typename Tuple>
 	struct tupleHelper<Func, Tuple, 0> {
 		static void func(Func _f, const Tuple& _t)
