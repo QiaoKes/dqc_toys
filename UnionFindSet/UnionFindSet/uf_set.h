@@ -13,6 +13,7 @@ public:
 	int find(int);
 	bool is_connected(int, int);
 	std::size_t get_area_number() const;
+	void clear() noexcept;
 private:
 	std::vector<int> _parents;
 	std::vector<int> _ranks;
