@@ -9,7 +9,13 @@ uf_set::uf_set(std::size_t n)
 		_parents[i] = i;
 }
 
-/*µİ¹éÊµÏÖ ¼ò½à
+void uf_set::clear() noexcept
+{
+	_ranks.clear();
+	_parents.clear();
+}
+
+/*é€’å½’å®ç° ç®€æ´
 int uf_set::find(int x)
 {
 	if (x != _parents[x]) {
@@ -19,7 +25,7 @@ int uf_set::find(int x)
 }
 */
 
-//µü´úÊµÏÖ ¸ü¿ì¸üºÃ 
+//è¿­ä»£å®ç° æ›´å¿«æ›´å¥½ 
 int uf_set::find(int x)
 {
 	while (x != _parents[x]) {
@@ -30,7 +36,7 @@ int uf_set::find(int x)
 	return _parents[x];
 }
 
-//ºÏ²¢Á½¸ö½Úµã ·µ»ØÊÇ·ñ³É¹¦
+//åˆå¹¶ä¸¤ä¸ªèŠ‚ç‚¹ è¿”å›æ˜¯å¦æˆåŠŸ
 bool uf_set::union_set(int x, int y)
 {
 	int x_root = find(x);
@@ -52,13 +58,13 @@ bool uf_set::union_set(int x, int y)
 	return true;
 }
 
-//ÅĞ¶ÏÁ½¸ö½ÚµãÊÇ·ñÁ¬½Ó
+//åˆ¤æ–­ä¸¤ä¸ªèŠ‚ç‚¹æ˜¯å¦è¿æ¥
 bool uf_set::is_connected(int x, int y)
 {
 	return find(x) == find(y);
 }
 
-//Á¬Í¨·ÖÁ¿
+//è¿é€šåˆ†é‡
 std::size_t uf_set::get_area_number() const
 {
 	return _curr_area;
